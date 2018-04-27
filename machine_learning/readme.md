@@ -1,7 +1,4 @@
-########################################################
-# 	Machine Learning
-########################################################
-
+Machine Learning
 
 
 find here all my work regarding various Machine Learning courses I've studied
@@ -19,8 +16,7 @@ directories :
 
 	exercices : 		TP and activities submited and evaluated for courses accreditations
 
-	kernels : 		general or specific work regarding a dataset, a tool, a concept
-				could be very basic, easy and short or more detailed and complex 
+	kernels : 		general or specific work regarding a dataset, a tool, a concept, could be very basic, easy and short or more detailed and complex 
 
 	sandbox : 		preparatory work, misc or partial or unfinished studies, draft code
 
