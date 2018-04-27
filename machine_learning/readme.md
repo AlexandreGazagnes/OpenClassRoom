@@ -1,9 +1,9 @@
-# Machine Learning
+#Machine Learning
 
 
 Find here all my work regarding various Machine Learning courses I've studied withOpenClassRoom. You'll find basic or more complex studies. More information bellow or in specific comments of each file.
 
-main topics : regression, classification, supervized/unsupervied learning, overfitting, accuracy, clustering, linear regression, logistic regression, SVM, EDA, preprpocessing adaboost, xboost, lasso, random forest, ridge, KNN, training/testing, neural networks + all features from Data Science.
+Main topics : regression, classification, supervized/unsupervied learning, overfitting, accuracy, clustering, linear regression, logistic regression, SVM, EDA, preprpocessing adaboost, xboost, lasso, random forest, ridge, KNN, training/testing, neural networks + all features from Data Science.
  
 
 Directories : 
