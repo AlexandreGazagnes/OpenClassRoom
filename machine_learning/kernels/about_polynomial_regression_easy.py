@@ -13,8 +13,9 @@
 
 # Description
 
-# this script is about polynomial regression using sklearn
+# this kernel is about polynomial regression using sklearn
 # nothing outsanding, just few calulation for fun :)
+# no related dataset or other studies
 
 
 

@@ -15,7 +15,7 @@
 
 # this script is about linear and polynomial regression using sklearn
 # in a n-dim (3 here but serialisable)
-# it comes after the fist exercice "about_linear_regression.py"
+# it comes after the fist exercice "about_linear_regression_2d_easy.py"
 
 
 
