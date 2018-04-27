@@ -12,7 +12,7 @@ Directories :
 
 * exercices : TP and activities submited and evaluated for course accreditations;
 
-* kernels : general or specific work regarding a dataset, a tool, a concept or for fun. Could be very basic, easy   
+* kernels : general or specific work regarding a dataset, a tool, a concept or just for fun (and learn). Could be very basic, easy   
    and short script or more detailed and complex notebook;
 
  *  sandbox : preparatory work, miscellaneous or unfinished studies, draft code;
