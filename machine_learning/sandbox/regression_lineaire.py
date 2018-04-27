@@ -1,4 +1,4 @@
-#!/usr/bin/env pythonX
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
