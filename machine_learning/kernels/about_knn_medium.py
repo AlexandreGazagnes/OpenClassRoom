@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
+
 #######################################
 #######################################
 #   About K-Nearest-Neighbors
@@ -12,17 +13,14 @@
 
 # Description
 
-# this script is about K-Nearest-Neighbors
-# classification using sklearn
+# this script is an easy kernel about K-Nearest-Neighbors classification 
+# using sklearn.
 # nothing outsanding, just few calulation for fun
-# with famous Iris dataset
+# this work is linked to the famous Iris dataset
 
 
 
-######################################
 # import
-######################################
-
 
 import pandas as pd 
 import numpy as np 
@@ -38,15 +36,15 @@ from sklearn.preprocessing import StandardScaler
 
 
 
+# creating a fake dataframe 
+
+df = pd.read_csv("../datasets/iris_data.csv")
+
+
+
 ######################################
 # cleaning and exploration
 ######################################
-
-
-# creating a fake dataframe 
-
-df = pd.read_csv("iris_data.csv")
-
 
 
 # first print exploration
@@ -59,7 +57,6 @@ print("\ndataframe info: \nshape : {}\ntypes :\n{}\ndim : {}\n"\
 		.format(df.shape, df.dtypes, df.ndim))
 
 
-
 # any NaN?
 
 for k in df.columns : 
@@ -67,11 +64,9 @@ for k in df.columns :
 print()
 
 
-
 # number or class : 
 
 print("How many flower varieties (class)? : {}\n".format(df["class"].unique()))
-
 
 
 # replace "Iris-flower" by flower in df.class
@@ -79,8 +74,8 @@ print("How many flower varieties (class)? : {}\n".format(df["class"].unique()))
 df["class"] = df["class"].map(lambda flower : flower.replace("Iris-", ""))
 
 
-
 # just for ploting
+
 def set_color(flower) : 
 	if "setosa" in flower : 
 		return "red"
@@ -94,16 +89,13 @@ def set_color(flower) :
 df["color"] = df["class"].map(set_color)
 
 
-
 # print ehanced dataframe
 
 print("New DataFrame : ")
 print(df.head())
 
 
-
 # first raw plot : 
-
 
 fig, ax = plt.subplots(2,2,figsize=(16, 12))
 
@@ -120,7 +112,6 @@ for val, loc in zip(df.drop(["class", "color"], axis=1).columns, loc) :
 plt.suptitle('Flower type, feature by feature', fontsize=16)
 plt.subplots_adjust(wspace=0.5)
 plt.show()
-
 
 
 # second raw plot 
@@ -143,7 +134,6 @@ plt.subplots_adjust(wspace=0.5)
 plt.show()
 
 
-
 # third raw plot
 
 
@@ -158,7 +148,6 @@ for i, val in enumerate(df.drop(["color", "class"], axis=1).columns):
 plt.suptitle("Features's global distribution", fontsize=16)
 plt.subplots_adjust(wspace=0.5)
 plt.show()
-
 
 
 # last raw plot
@@ -196,7 +185,6 @@ X = df.drop(["class", "color"], axis=1)
 y = df['class']
 
 
-
 # let's have a brute force dummy KNN 
 
 errors= list()
@@ -222,21 +210,26 @@ for k in k_range :
 	errors.append(100 * round(1 - knn.score(X_test, y_test),4))
 
 
+# plot result
+
 plt.plot(k_range, errors)
 plt.title("error rate of knn with various k")
 plt.xlabel("k"); plt.ylabel("error rate")
 plt.show()	 
 
 
-
 # is any feature more important or performant ? 
 
 # create design matrix X and target vector y
+
 X_petal = df.drop(["class", "color", "sepal_width", "sepal_length"], axis=1)
 X_sepal = df.drop(["class", "color", "petal_width", "petal_length"], axis=1)
 
+
 # prepare for ploting
+
 fig, ax = plt.subplots(2,2)
+
 
 # main features loop
 for i, var in enumerate([(X_sepal, "sepal"), (X_petal, "petal")]) : 
@@ -266,6 +259,7 @@ for i, var in enumerate([(X_sepal, "sepal"), (X_petal, "petal")]) :
 	ax[0,i].set_xlabel("k") ; ax[0,i].set_ylabel("error in %")
 	ax[0,i].set_xticks(range(0, 50, 5)), ax[0,i].set_yticks(range(0, 35, 2))
 
+
 # also plot (or replot) sepal/petal classification 
 for i, val in enumerate(["sepal", "petal"])  :
 	x_len, y_wid = "{}_length".format(val), "{}_width".format(val)
@@ -279,8 +273,7 @@ for i, val in enumerate(["sepal", "petal"])  :
 plt.show()
 
 
-
-# for sure on feature is more performant than the other :) 
+# for sure some feature are more performant than the other :) 
 # just for fun let's redo the same operation but without sepal_width
 
 errors= list()
@@ -313,27 +306,31 @@ plt.xlabel("k"); plt.ylabel("error rate")
 plt.show()	 
 
 
-
 # lets implement a Cross validation method, but from scratch (without sklearn 
 # dedicated module) 
 # CV stands for "Cross Validation :)"
 
 # separate the dataframe in  : 
+
 CV_SIZE = 5
 
 # creating a list of index pairs strat/stop for each slice of the CV 
+
 CV_range, CV_mod = len(df) // CV_SIZE, len(df) % CV_SIZE
 CV_list = np.array((CV_SIZE-1) * [CV_range] + [CV_range + CV_mod]) 
 CV_list = [[i - CV_range, i] for i in CV_list.cumsum()]
 
-# depreciated but possible :  shuffle dataframe 
-# df = shuffle(df)
-# X = df.drop(["class", "color"], axis=1)
-# y = df['class']
+
+		# depreciated but possible :  shuffle dataframe 
+		# df = shuffle(df)
+		# X = df.drop(["class", "color"], axis=1)
+		# y = df['class']
+
 
 errors  = list()
 k_range = range(1, 50)
 
+# main loop
 for k in k_range : 
 
 	CV_errors = list()
@@ -353,7 +350,9 @@ for k in k_range :
 	
 	errors.append(np.array(CV_errors).mean()) 
 
+
 # plot error vs k
+
 plt.plot(k_range, errors)
 plt.title("error rate of knn with various k")
 plt.xlabel("k"); plt.ylabel("error rate")
@@ -363,12 +362,9 @@ plt.show()
 # good but not  optimal, for a Cross Validation method
 
 
-
-
 # let's try an better 'sklearnic' version :) 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
-
 
 
 # lets standardize our features 
@@ -384,13 +380,13 @@ param_grid = {'n_neighbors':range(1, 50)}
 score = 'accuracy'
 
 
-# Créer un classifieur kNN avec recherche d'hyperparamètre par validation croisée
+# creation of KNN classificator and find best hyper-parametres
 
 clf = GridSearchCV(KNeighborsClassifier(),param_grid, cv=10, scoring=score)
 clf.fit(X_train_std, y_train)
 
 
-# Afficher le(s) hyperparamètre(s) optimaux
+# print best hyper-parameters
 
 print( "Meilleur(s) hyperparamètre(s) sur le jeu d'entraînement:",)
 print( clf.best_params_)
@@ -405,3 +401,5 @@ for mean, std, params in zip(clf.cv_results_['mean_test_score'], # score moyen
 		.format(score, round(mean, 3), round(std * 2,3), params ))
 
 y_pred = clf.predict(X_test_std)
+
+

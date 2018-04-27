@@ -3,14 +3,18 @@
 
 
 
-#######################################
-#   about logistic and svm
-#######################################
+###################################################
+###################################################
+#   about logistic and svm regression
+###################################################
+###################################################
 
 
 
-# this is a sandbox script in order to test and manipulate logistic and svm
-# classificator
+# Description 
+
+# this is a very easy kernel for testing and manipulating logistic and svm
+# regression
 # this work will be based on a mushroom.csv dataset
 # no direct link with external datasets our other studies
 
@@ -44,7 +48,7 @@ raw_data = pd.read_csv('../datasets/mushrooms.csv')
 
 
 ############################################################
-# preprocessing : encodin in categorical features
+#	preprocessing : encodin in categorical features
 ############################################################
 
 
@@ -54,12 +58,12 @@ for col in raw_data.columns:
 
     raw_data[col] = labelencoder.fit_transform(raw_data[col])
 
-print(data.head())
+print(raw_data.head())
 
 
 
 ############################################################
-# split test and train data
+#	split test and train data
 ############################################################
 
 
@@ -71,9 +75,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
 
 
 ############################################################
-# standard logistic regression 
+#	standard logistic regression 
 ############################################################
-
 
 
 # model creation
@@ -108,7 +111,7 @@ plt.show()
 
 
 ############################################################
-# optimied logistic regression
+#	optimied logistic regression
 ############################################################
 
 
@@ -122,7 +125,7 @@ lr_gs.fit(X_train, y_train)
 print(lr_gs.best_params_)
 
 
-# results manaement
+# results management
 
 y_prob = lr.predict_proba(X_test)[:,1] 
 y_pred = np.where(y_prob > 0.5, 1, 0) 
@@ -135,8 +138,9 @@ print (roc_auc)
 
 
 ############################################################
-# sandard Support Vector Machine
+#	sandard Support Vector Machine
 ############################################################
+
 
 # model creation 
 
@@ -148,8 +152,9 @@ gs_svm.fit(X_train, y_train)
 print(gs_svm.best_params_)
 
 
-# results manaement
+# results management
 
 false_positive_rate, true_positive_rate, thresholds = roc_curve(y_test, y_prob)
 roc_auc = auc(false_positive_rate, true_positive_rate)
 print (roc_auc)
+
