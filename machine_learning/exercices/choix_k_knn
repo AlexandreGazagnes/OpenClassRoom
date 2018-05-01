@@ -1,0 +1,31 @@
+Exercices
+ Comment ça marche ?
+Sélectionnez le nombre de voisins dans un kNN pour une régression
+Temps d'attente moyen pour être corrigé sur cet exercice : 10 jours
+
+ Retour au cours
+
+Bienvenue dans cette activité corrigée par les pairs !
+
+Votre mission
+Dans cette activité, vous utiliserez la version régression du K-nn afin de prédire la qualité du vin. Vous évaluerez votre modèle à l’aide des méthodes étudiées dans cette partie pour optimiser votre algorithme et choisir les meilleurs hyper-paramètres (le nombre de voisins), à nouveau à l’aide d’une grid search, à implémenter vous même. 
+
+Objectif
+Dans cette activité, vous devez optimiser l’erreur quadratique moyenne (Mean Squared Error, MSE). Vous pourrez observer le comportement de la MSE et la comparer à celui de R^2.
+
+Vous comparerez les performances à l’aide d’une baseline naïve ainsi que les différentes heuristiques, comme effectué dans le TP précédent.  Pour cela, vous utiliserez cette fois le second dataset (https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv)
+
+Livrable
+Un classeur iPython où vous interpréterez les valeurs des différentes heuristiques utilisées ainsi que le choix final.
+
+Sélection du travail
+Votre travail (format .zip, 70 Mo max)
+
+Comment créer un fichier ZIP sous Windows ? Sous Mac OS X ?
+Vous pouvez laisser un mot à l'attention de vos correcteurs si vous le souhaitez :
+
+(facultatif)
+ Validation
+Attention Relisez-vous bien ! Après soumission de votre travail, vous ne pourrez plus le modifier ni en renvoyer un nouveau !
+
+

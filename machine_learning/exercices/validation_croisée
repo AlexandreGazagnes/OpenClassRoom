@@ -1,0 +1,34 @@
+Exercices
+ Comment ça marche ?
+Implémentez une validation croisée
+Temps d'attente moyen pour être corrigé sur cet exercice : 14 jours
+
+ Retour au cours
+
+Bienvenue dans cette activité corrigée par les pairs !
+
+Votre mission
+Dans cette activité, vous devez ré-implémenter la fonction de validation croisée de la libraire scikit-learn (la fonction GridSearchCV), dans l’objectif d’effectuer la classification du dataset sur la qualité du vin. Pour cela, vous pourrez réutiliser le code du TP du chapitre précédent comme base de travail.
+
+L’algorithme devra permettre d’optimiser l’accuracy du modèle. La fonction prendra en entrée le tableau des hyperparamètres à tester ainsi que le nombre de folds. On utilisera des folds exacts (non randomisé) afin de pouvoir comparer les résultats.
+
+Vous pourrez ensuite comparer les performances de votre implémentation par rapport à l’implémentation scikit-learn effectuée lors du TP. Pour cela, je vous conseille dans un premier temps de ne pas randomiser la sélection des sets, mais de faire une sélection exacte afin de pouvoir comparer des résultats qui doivent être identiques entre votre implémentation et celle de scikit.
+
+Livrables
+Vous devrez mettre sur la plateforme un .zip contenant : 
+
+le classeur iPython avec l’implémentation de la fonction.
+le code modifié du TP permettant l’application et l’évaluation du K-nn avec votre fonction de validation croisé.
+Bon travail !
+
+Sélection du travail
+Votre travail (format .zip, 70 Mo max)
+
+Comment créer un fichier ZIP sous Windows ? Sous Mac OS X ?
+Vous pouvez laisser un mot à l'attention de vos correcteurs si vous le souhaitez :
+
+(facultatif)
+ Validation
+Attention Relisez-vous bien ! Après soumission de votre travail, vous ne pourrez plus le modifier ni en renvoyer un nouveau !
+
+

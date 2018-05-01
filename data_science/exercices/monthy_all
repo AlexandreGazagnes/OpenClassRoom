@@ -1,0 +1,31 @@
+Exercices
+ Comment ça marche ?
+Simulez le problème de Monty Hall avec Numpy
+Temps d'attente moyen pour être corrigé sur cet exercice : 6 jours
+
+ Retour au cours
+
+Description
+Pour cet exercice, je vous demande simplement de refaire ce que nous avons fait dans le chapitre deux, mais en utilisant cette fois Numpy.  Vous allez donc simuler le problème de Monty Hall, et visualiser les résultats de vos simulations. Vous devrez assembler les deux fonctions  play_game  et  play  au sein d'une même fonction. Cette fonction devra générer un tableau Numpy des gains du joueur, et non pas une  list. 
+
+Vous ne devrez pas faire appel à la librairie  random  de Python (mais vous utiliserez la librairie  random de Numpy). 
+
+Votre code ne doit pas comporter de boucle (pas de  for) dans la partie calculatoire. Pour cela, vous devrez sûrement vous creuser un peu la tête. N'oubliez pas que Numpy peut très rapidement comparer les éléments de deux tableaux un à un. 
+
+Vous devrez intégrer cette fonction dans un module Python. Votre notebook ne doit comporter aucune définition de fonction.
+
+Votre notebook doit s'exécuter et générer les mêmes graphiques que ceux du cours. 
+
+ 
+
+Sélection du travail
+Votre travail (format .zip, 70 Mo max)
+
+Comment créer un fichier ZIP sous Windows ? Sous Mac OS X ?
+Vous pouvez laisser un mot à l'attention de vos correcteurs si vous le souhaitez :
+
+(facultatif)
+ Validation
+Attention Relisez-vous bien ! Après soumission de votre travail, vous ne pourrez plus le modifier ni en renvoyer un nouveau !
+
+

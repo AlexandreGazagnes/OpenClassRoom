@@ -1,0 +1,43 @@
+Exercices
+ Comment ça marche ?
+Allez plus loin dans la prédiction de loyer
+Temps d'attente moyen pour être corrigé sur cet exercice : 4 jours
+
+ Retour au cours
+
+ 
+
+Bienvenue dans cette activité corrigée entre pairs !
+
+Pour cette activité, votre objectif sera d'améliorer notre modèle de prédiction de loyer, à l'aide d'une feature (variable) supplémentaire en entrée, pour obtenir un modèle plus performant. J'ai ainsi ajouté comme observation supplémentaire l'arrondissement de l'appartement. 
+
+Vous pouvez télécharger le nouveau dataset ici.
+
+Votre mission
+Votre mission, si vous l'acceptez, est de reprendre le code du TP de régression linéaire et de tester plusieurs manières d'améliorer la modélisation à l'aide de cette nouvelle observation.
+
+Voici ce qu'on attend de vous :
+
+une séparation en training / testing set
+2 propositions d'amélioration du modèle qui obtiennent de meilleures performances que la "baseline" (la régression linéaire avec une seule feature)
+Une sélection d'un modèle final à partir des performances
+À vos claviers !
+
+Comment rendre votre travail ?
+Pour rendre votre travail, vous devrez fournir un fichier python ou un notebook avec l'ensemble des tests effectués ainsi que les outputs (images & graphes). Pensez à bien inclure des explications sur les points d'attentions dans les commentaires, ainsi que vos choix d'implémentation ! Savoir communiquer ses résultats de façon claire fait partie intégrante du travail de data scientist, ne le négligez pas.
+
+Une fois satistfait·e, compressez votre travail dans un fichier zip et soumettez le sur la plateforme.
+
+Bonne chance !
+
+Sélection du travail
+Votre travail (format .zip, 70 Mo max)
+
+Comment créer un fichier ZIP sous Windows ? Sous Mac OS X ?
+Vous pouvez laisser un mot à l'attention de vos correcteurs si vous le souhaitez :
+
+(facultatif)
+ Validation
+Attention Relisez-vous bien ! Après soumission de votre travail, vous ne pourrez plus le modifier ni en renvoyer un nouveau !
+
+
